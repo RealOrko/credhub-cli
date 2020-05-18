@@ -3,6 +3,17 @@
 [![slack.cloudfoundry.org](https://slack.cloudfoundry.org/badge.svg)](https://slack.cloudfoundry.org)
 [![GoDoc](https://godoc.org/github.com/golang/gddo?status.svg)](http://godoc.org/code.cloudfoundry.org/credhub-cli/credhub)
 
+<div>
+    <a href="https://snapcraft.io/cf-ch">
+        <img alt="Get it from the Snap Store" src="https://snapcraft.io/static/images/badges/en/snap-store-white.svg" />
+    </a>
+</div>
+<div>
+    <a href="https://snapcraft.io/cf-ch">
+        <img alt="cf-bbl" src="https://snapcraft.io/cf-ch/badge.svg" />
+    </a>
+</div>
+
 CredHub manages credentials like passwords, certificates, certificate authorities, ssh keys, rsa keys and arbitrary values (strings and JSON blobs). CredHub provides a CLI and API to get, set, generate and securely store such credentials.
 
 * [CredHub Tracker](https://www.pivotaltracker.com/n/projects/1977341)
@@ -15,12 +26,27 @@ See additional repos for more info:
 
 ### Installing the CLI
 
-#### MacOS X with Homebrew
+#### MacOS X
+
 ```bash
   brew install cloudfoundry/tap/credhub-cli
 ```
 
-#### Linux and Windows
+#### Linux
+
+You have to make sure you have [installed snapd](https://snapcraft.io/docs/installing-snapd) for your linux distro. 
+
+```sh
+snap install cf-ch
+```
+
+You can also alias `cf-ch` to `credhub` in your `.bashrc` file. 
+
+```sh
+echo "alias credhub='cf-ch'" >> ~/.bashrc
+```
+
+#### Windows
 Download and install the desired release from the [release page](https://github.com/cloudfoundry-incubator/credhub-cli/releases).
 
 ### Building the CLI:

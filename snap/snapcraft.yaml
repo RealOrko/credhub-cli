@@ -1,0 +1,23 @@
+name: cf-ch
+base: core18
+version: '2.7.0'
+summary: CredHub CLI provides a command line interface to interact with CredHub servers
+description: |
+  CredHub CLI provides a command line interface to interact with CredHub servers
+
+grade: stable # devel/stable
+confinement: strict # devmode/strict
+
+parts:
+  cf-ch:
+    plugin: go
+    source-type: git
+    source-tag: 2.7.0
+    source: .
+    source-subdir: .
+    go-importpath: github.com/cloudfoundry-incubator/credhub-cli
+    build-packages:
+      - gcc
+apps:
+  cf-ch:
+    command: bin/credhub-cli
